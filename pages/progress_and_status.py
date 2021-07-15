@@ -1,8 +1,10 @@
 import streamlit as st
 
-def display_page(my_title):
-    st.title(my_title)
+from .shared_functions import page_header, documentation, breakline
 
+def display_page(my_title):
+    page_header(my_title)
+    
     with st.beta_expander("Progress"):
         clicked_progress_button = st.button("Run progress")
         if clicked_progress_button:

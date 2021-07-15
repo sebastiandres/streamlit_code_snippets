@@ -1,5 +1,10 @@
 import streamlit as st
 
+def page_header(header):
+    st.title(":sparkles: Streamlit Code Snippets :sparkles:")
+    st.header(header)
+    return
+
 def breakline():
     st.markdown("---")
     return    

@@ -1,12 +1,6 @@
 import streamlit as st
 
-from .shared_functions import documentation, breakline
-
-def show_code(col, my_str):
-    #with col.beta_expander("code"):
-    #   st.code(my_str)
-    col.code(my_str)
-    return
+from .shared_functions import page_header, documentation, breakline
 
 def display_page(my_title):
     """Creates the custom content of a page.
@@ -14,7 +8,8 @@ def display_page(my_title):
     args:
     - my_title: string with the title for the page.
     """
-    st.title(my_title)
+    page_header(my_title)
+    
     # Title
     with st.beta_expander("Title"):
         with st.echo('below'):

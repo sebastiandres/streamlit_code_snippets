@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 
-from .shared_functions import documentation, breakline
+from .shared_functions import page_header, documentation, breakline
 
 def display_page(my_title):
     """Creates the custom content of a page.
@@ -10,7 +10,9 @@ def display_page(my_title):
     args:
     - my_title: string with the title for the page.
     """
-    st.title(my_title)
+
+    page_header(my_title)
+    
     # Write
     with st.beta_expander("Write general variables"):
         with st.echo('below'):

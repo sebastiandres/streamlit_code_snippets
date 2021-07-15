@@ -37,22 +37,22 @@ st.sidebar.markdown("Created by [sebastiandres](https://sebastiandres.xyz)")
 
 if page == DISPLAY_TEXT:
     from pages import display_text
-    display_text.display_page(DISPLAY_TEXT)
+    display_text.display_page(page)
 elif page == DISPLAY_DATA:
     from pages import display_data
-    display_data.display_page(DISPLAY_DATA)
+    display_data.display_page(page)
 elif page == DISPLAY_GRAPHS:
     from pages import display_graphs
-    display_graphs.display_page(DISPLAY_GRAPHS)
+    display_graphs.display_page(page)
 elif page == USE_MEDIA:
     from pages import display_media
-    display_media.display_page(DISPLAY_GRAPHS)
+    display_media.display_page(page)
 elif page == DRAWABLE_CANVAS:
     from pages import drawable_canvas
-    drawable_canvas.display_page(DISPLAY_GRAPHS)
+    drawable_canvas.display_page(page)
 elif page == INTERACTIVE_DISPLAY:
     from pages import interactive_widgets
-    interactive_widgets.display_page(PROGRESS_AND_STATUS)
+    interactive_widgets.display_page(page)
 elif page == PROGRESS_AND_STATUS:
     from pages import progress_and_status
-    progress_and_status.display_page(PROGRESS_AND_STATUS)
+    progress_and_status.display_page(page)
