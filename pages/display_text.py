@@ -58,8 +58,8 @@ def display_page(my_title):
     with st.beta_expander("Latex"):
         with st.echo('below'):
             st.latex(r''' e^{i\pi} + 1 = 0 ''')    
-        breakline()
-        with st.echo('below'):
-            st.latex(r''' e^{i\pi} + 1 = 0 ''')
+        #breakline()
+        #with st.echo('below'):
+        #    st.latex(r'''I love small matrice such $\big(\begin{smallmatrix} a & b\\ c & d \end{smallmatrix}\big)$''')
         documentation("latex")
 
