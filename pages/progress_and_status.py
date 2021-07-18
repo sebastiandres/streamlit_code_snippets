@@ -14,7 +14,7 @@ def display_page(my_title):
                 for i in range(0,101,10):
                     my_bar.progress(i)
                     time.sleep(.3)
-            st.markdown("Documentation: [link](https://docs.streamlit.io/en/stable/api.html#streamlit.progress)")
+            documentation("progress")
 
     with st.beta_expander("Spinner"):
         clicked_spinner_button = st.button("Run spinner")
@@ -24,32 +24,32 @@ def display_page(my_title):
                 with st.spinner('Computing some important for 5 seconds...'):
                     time.sleep(5)
                 st.success('Done')            
-            st.markdown("Documentation: [link](https://docs.streamlit.io/en/stable/api.html#streamlit.spinner)")
+            documentation("spinner")
 
     with st.beta_expander("Ballons"):
         with st.echo():
             st.balloons()
-        st.markdown("Documentation: [link](https://docs.streamlit.io/en/stable/api.html#streamlit.balloons)")
+        documentation("baloons")
 
     with st.beta_expander("Error message"):
         with st.echo():
             st.error('This is an Error message')
-        st.markdown("Documentation: [link](https://docs.streamlit.io/en/stable/api.html#streamlit.error)")
+        documentation("error")
 
     with st.beta_expander("Warning message"):
         with st.echo():
             st.warning('This is a Warning message')
-        st.markdown("Documentation: [link](https://docs.streamlit.io/en/stable/api.html#streamlit.warning)")
+        documentation("warning")
 
     with st.beta_expander("Info message"):
         with st.echo():
             st.info('This is Info message')
-        st.markdown("Documentation: [link](https://docs.streamlit.io/en/stable/api.html#streamlit.info)")
+        documentation("info")
 
     with st.beta_expander("Success message"):
         with st.echo():
             st.success('This is a Success message')
-        st.markdown("Documentation: [link](https://docs.streamlit.io/en/stable/api.html#streamlit.success)")
+        documentation("success")
 
     with st.beta_expander("This is an Exception"):
         with st.echo():
@@ -57,4 +57,4 @@ def display_page(my_title):
                 1/0
             except Exception as e:
                 st.exception(e)
-        st.markdown("Documentation: [link](https://docs.streamlit.io/en/stable/api.html#streamlit.exception)")
+        documentation("exception")

@@ -14,16 +14,22 @@ def display_page(my_title):
     with st.beta_expander("Title"):
         with st.echo('below'):
             st.title('My Title')
+        with st.echo('below'):
+            st.title('Another Title', anchor="CustomTitleAnchor")
         documentation("title")
     # Header 
     with st.beta_expander("Header"):
         with st.echo('below'):
             st.header('My Header')
+        with st.echo('below'):
+            st.header('Another Header', anchor="CustomHeaderAnchor")
         documentation("header")
     # Header 
-    with st.beta_expander("SubHeader"):
+    with st.beta_expander("Subheader"):
         with st.echo('below'):
             st.subheader('My Subheader')
+        with st.echo('below'):
+            st.subheader('Another Subheader', anchor="CustomSubheaderAnchor")
         documentation("subheader")
     # (fixed width) Text
     with st.beta_expander("Text"):
@@ -33,28 +39,28 @@ def display_page(my_title):
     # Markdown
     with st.beta_expander("Markdown"):
         with st.echo('below'):
-            st.markdown('This is *Markdown* in all its _glory_')
-        breakline()
-        with st.echo('below'):
-            st.markdown('Markdown but with optional argument', unsafe_allow_html = True)
+            st.markdown('This is **Markdown** in all its _glory_ :heart_eyes_cat:')
         breakline()
         with st.echo('below'):
             # Trick for markdown on several lines
             lines = [
-                      "This is a multiline markdown comment.",
-                      "",
-                      "You can even use lists",
-                      "* One",
-                      "* Two",
+                      "This is a **_multiline_** markdown comment.",
+                      "* One :dog:",
+                      "* Two :cat:",
                       ]
             st.markdown("\n".join(lines))
         documentation("markdown")
+        st.markdown("[Github's markdown documentation](https://guides.github.com/features/mastering-markdown/)")
+        st.markdown("[Supported emojis](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)")
     # Latex
     with st.beta_expander("Latex"):
         with st.echo('below'):
             st.latex(r''' e^{i\pi} + 1 = 0 ''')    
-        #breakline()
-        #with st.echo('below'):
-        #    st.latex(r'''I love small matrice such $\big(\begin{smallmatrix} a & b\\ c & d \end{smallmatrix}\big)$''')
+        breakline()
+        with st.echo('below'):
+            st.latex(r'''\begin{pmatrix} a & b\\ c & d \end{pmatrix}''')
+        breakline()
         documentation("latex")
+        st.markdown("[Supported latex](https://katex.org/docs/supported.html)")
+        st.markdown("Observation: This is intended to display latex formulas, not for mixing text and math.")
 
