@@ -18,11 +18,11 @@ st.set_page_config(layout="wide")
 ## Create a page dropdown
 page = st.sidebar.radio("Choose your page:", 
                           [
-                            INTERACTIVE_DISPLAY,
-                            DISPLAY_CODE, 
                             DISPLAY_TEXT, 
                             DISPLAY_DATA, 
                             PROGRESS_AND_STATUS,
+                            DISPLAY_CODE, 
+                            INTERACTIVE_DISPLAY,
                             #DISPLAY_GRAPHS, 
                             #DRAWABLE_CANVAS, 
                             #USE_MEDIA, 

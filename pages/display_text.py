@@ -12,11 +12,16 @@ def display_page(my_title):
     
     # Title
     with st.beta_expander("Title"):
+        # what4("To put a title on the page. Notice it will put an anchor (link) next to the title!!!")
+        st.markdown("**What for?**: To put a title on the page. Notice it automatically gets a anchor (link)!")
+        # examples()
+        st.markdown("Examples:")
         with st.echo('below'):
             st.title('My Title')
         with st.echo('below'):
             st.title('Another Title', anchor="CustomTitleAnchor")
         documentation("title")
+
     # Header 
     with st.beta_expander("Header"):
         with st.echo('below'):
@@ -24,18 +29,21 @@ def display_page(my_title):
         with st.echo('below'):
             st.header('Another Header', anchor="CustomHeaderAnchor")
         documentation("header")
-    # Header 
+
+    # Subheader 
     with st.beta_expander("Subheader"):
         with st.echo('below'):
             st.subheader('My Subheader')
         with st.echo('below'):
             st.subheader('Another Subheader', anchor="CustomSubheaderAnchor")
         documentation("subheader")
+
     # (fixed width) Text
     with st.beta_expander("Text"):
         with st.echo('below'):
             st.text('My fixed width text')
         documentation("text")
+
     # Markdown
     with st.beta_expander("Markdown"):
         with st.echo('below'):
@@ -52,6 +60,7 @@ def display_page(my_title):
         documentation("markdown")
         st.markdown("[Github's markdown documentation](https://guides.github.com/features/mastering-markdown/)")
         st.markdown("[Supported emojis](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)")
+
     # Latex
     with st.beta_expander("Latex"):
         with st.echo('below'):
