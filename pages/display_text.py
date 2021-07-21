@@ -15,10 +15,12 @@ def display_page(my_title):
     with st.beta_expander("Title"):
         what4("To put a title on the page. Notice it will put an anchor (link) next to the title!!!")
         examples()
+
         with st.echo('below'):
             st.title('My Title')
-
+        
         breakline()
+
         with st.echo('below'):
             st.title('Another Title', anchor="CustomTitleAnchor")
 
