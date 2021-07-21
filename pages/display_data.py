@@ -12,8 +12,8 @@ def display_page(my_title):
     """
 
     page_header(my_title)
-    st.write("These are methods used to display different types of data.")
-    st.write("You can safely assume that you can always use method `write`.")
+    st.write("Methods used to display different types of data.")
+    st.write("TLDR; You can safely assume that you can always use method `write`.")
     
     # Numbers
     with st.beta_expander("Write numbers"):
@@ -45,6 +45,8 @@ def display_page(my_title):
 
     # Arbitrary expressions
     with st.beta_expander("Write arbitrary expressions"):
+        what4("You can use it similar to `print` method, with variable number of arguments.")
+        examples()
         with st.echo('below'):
             x, cat = 42, 0+1j
             st.write("The value of x =", x, "and :cat: = ", cat) # Several arguments 
@@ -59,29 +61,46 @@ def display_page(my_title):
 
     # Text
     with st.beta_expander("Write text"):
-        st.write("You can write general markdown")
+        what4("You can write general markdown strings")
+        examples()
         with st.echo('below'):
             st.write("This _is_ a **string**") # Strings
         documentation("write")
 
     # Dataframes
     with st.beta_expander("Dataframes"):
+        what4("You can write dataframes")
+        examples()
         with st.echo('below'):
             st.dataframe(pd.DataFrame(data={'col1': [1, 2, 3], 'col2': [3.5, 4.5, 5.5]}))
+        breakline()
+        with st.echo('below'):
+            st.write(pd.DataFrame(data={'col1': [1, 2, 3], 'col2': [3.5, 4.5, 5.5]}))
         documentation("dataframe")
 
     # Table
     with st.beta_expander("Tables"):
+        what4("You can write tables (but they are ugly)")
+        examples()
         with st.echo('below'):
             st.table([[1,2,3],[2,3,4]])
         breakline()
         with st.echo('below'):
             X = np.random.randn(5, 5)
             st.table(X)
+        breakline()
+        with st.echo('below'):
+            Y = np.random.randn(5, 5)
+            st.write(Y)
         documentation("table")
 
     # JSON
     with st.beta_expander("JSON"):
+        what4("You can write general JSON data")
+        examples()
         with st.echo('below'):
             st.json({'foo':'bar','fu':[0, 1, 3, 5, 7, 9]})
+        breakline()
+        with st.echo('below'):
+            st.write({'foo':'bar','fu':[0, 1, 3, 5, 7, 9]})
         documentation("json")

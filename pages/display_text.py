@@ -9,7 +9,7 @@ def display_page(my_title):
     - my_title: string with the title for the page.
     """
     page_header(my_title)
-    st.markdown("These are methods used to display different types of text.")
+    st.write("Methods used to display different types of text.")
 
     # Title
     with st.beta_expander("Title"):
@@ -66,7 +66,7 @@ def display_page(my_title):
 
     # Latex
     with st.beta_expander("Latex"):
-        what4("To display a text created with markdown.")
+        what4("To display latex formulas. This is intended to display latex formulas, not for mixing text and math.")
         examples()
         with st.echo('below'):
             st.latex(r''' e^{i\pi} + 1 = 0 ''')    
@@ -76,7 +76,6 @@ def display_page(my_title):
         breakline()
         documentation("latex")
         st.markdown("[Supported latex](https://katex.org/docs/supported.html)")
-        st.markdown("Observation: This is intended to display latex formulas, not for mixing text and math.")
 
     # (fixed width) Text
     with st.beta_expander("Text"):

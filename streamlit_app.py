@@ -8,7 +8,7 @@ DISPLAY_CODE = "Display Code"
 DISPLAY_GRAPHS = "Display Graphs"
 USE_MEDIA = "Webcam and Microphone"
 DRAWABLE_CANVAS = "Drawable Canvas"
-INTERACTIVE_DISPLAY = "Interactive Display"
+INTERACTIVE_DISPLAY = "User interaction"
 PROGRESS_AND_STATUS = "Progress and Status"
 
 # Set wide display
@@ -20,8 +20,8 @@ page = st.sidebar.radio("Choose your page:",
                           [
                             DISPLAY_TEXT, 
                             DISPLAY_DATA, 
-                            PROGRESS_AND_STATUS,
                             DISPLAY_CODE, 
+                            PROGRESS_AND_STATUS,
                             INTERACTIVE_DISPLAY,
                             #DISPLAY_GRAPHS, 
                             #DRAWABLE_CANVAS, 
