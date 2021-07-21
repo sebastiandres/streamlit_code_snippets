@@ -17,9 +17,11 @@ def display_page(my_title):
         examples()
         with st.echo('below'):
             st.title('My Title')
+
         breakline()
         with st.echo('below'):
             st.title('Another Title', anchor="CustomTitleAnchor")
+
         documentation("title")
 
     # Header 
@@ -28,9 +30,11 @@ def display_page(my_title):
         examples()
         with st.echo('below'):
             st.header('My Header')
+
         breakline()
         with st.echo('below'):
             st.header('Another Header', anchor="CustomHeaderAnchor")
+
         documentation("header")
 
     # Subheader 
@@ -39,9 +43,11 @@ def display_page(my_title):
         examples()
         with st.echo('below'):
             st.subheader('My Subheader')
+
         breakline()
         with st.echo('below'):
             st.subheader('Another Subheader', anchor="CustomSubheaderAnchor")
+
         documentation("subheader")
 
     # Markdown
@@ -50,6 +56,7 @@ def display_page(my_title):
         examples()
         with st.echo('below'):
             st.markdown('This is **Markdown** in all its _glory_ :heart_eyes_cat:')
+
         breakline()
         with st.echo('below'):
             # Trick for markdown on several lines
@@ -60,6 +67,7 @@ def display_page(my_title):
                       "* And latex, from $\\alpha$ to $\\omega$",
                       ]
             st.markdown("\n".join(lines))
+
         documentation("markdown")
         st.markdown("[Github's markdown documentation](https://guides.github.com/features/mastering-markdown/)")
         st.markdown("[Supported emojis](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md)")
@@ -70,9 +78,11 @@ def display_page(my_title):
         examples()
         with st.echo('below'):
             st.latex(r''' e^{i\pi} + 1 = 0 ''')    
+ 
         breakline()
         with st.echo('below'):
             st.latex(r'''\begin{pmatrix} a & b\\ c & d \end{pmatrix}''')
+ 
         breakline()
         documentation("latex")
         st.markdown("[Supported latex](https://katex.org/docs/supported.html)")
@@ -84,7 +94,9 @@ def display_page(my_title):
         examples()
         with st.echo('below'):
             st.text('My fixed width text')
+
         breakline()
         with st.echo('below'):
             st.text('Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.')
+
         documentation("text")
